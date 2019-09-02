@@ -1,23 +1,32 @@
 # Task Tracker
 
-Inspired by [@campoy](https://github.com/campoy)'s JustForFunc series #30 video: https://www.youtube.com/watch?v=_jQ3i_fyqGA
+Inspired by [@campoy](https://github.com/campoy)'s JustForFunc series #31 video: https://www.youtube.com/watch?v=uolTUtioIrc
 
 ## Usage
 
-1. Download the app via: `go get -u github.com/rmccorm4/gotodo/cmd/todo`
+0. Clone repo
 
-2. Start adding tasks
+`git clone https://github.com/rmccorm4/gotodo-grpc`
+
+1. Start server
+
+```
+# Start server listening on port 8888
+go run cmd/server/main.go
+```
+
+2. Start adding tasks with client
 
 ```bash
-todo add Go to the gym
-todo add Write more code
-todo add Sleep
+go run cmd/client/main.go add Go to the gym
+go run cmd/client/main.go add Write more code
+go run cmd/client/main.go add Sleep
 ```
 
 3. List your tasks
 
 ```bash
-> todo list
+> go run cmd/client/main.go list
 
 ❌ Go to the gym
 ❌ Write more code
